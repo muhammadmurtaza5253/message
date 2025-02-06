@@ -23,7 +23,7 @@
 
 #### Visual Magic
 - Floating love particles (❤️, 🌟, 💞)
-- Smooth gradient background animation
+- Smooth gradient background 
 - Subtle heart pattern overlay
 
 
