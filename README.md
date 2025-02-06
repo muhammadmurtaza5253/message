@@ -69,3 +69,12 @@ background:
 
 ## Spread the Love 🌹
 If this project made your heart flutter, give it a ⭐ and share it with someone special!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+[Viktor Hadzhiyanev]  
+[GitHub Link](https://github.com/ViktorHadzhiyanev)
