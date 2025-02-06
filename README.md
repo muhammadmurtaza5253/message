@@ -3,7 +3,7 @@
 **Valentine's Day Surprise** is a website created with love to make Valentine's Day even more special! It presents six romantic messages in a cinematic style, combined with an animated background and a fun interactive surprise.
 
 ## Live Demo 
-[![Live Demo](https://img.shields.io/badge/-❤_Try_Our_Live_Demo!-FF69B4?style=for-the-badge)](https://viktorhadzhiyanev.github.io/Valentines-Day-Suprise/)
+[![Live Demo](https://img.shields.io/badge/-❤_Try_Our_Live_Demo!-FF69B4?style=for-the-badge)](https://viktorhadzhiyanev.github.io/Valentines-Day-Surprise/)
 
 ## ✨ Features That Make Hearts Flutter
 
