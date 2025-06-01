@@ -24,7 +24,7 @@
 let currentMessage = 0;
 const messages = document.querySelectorAll('.message');
 const finalQuestion = document.querySelector('.final-question');
-
+console.log(messages);
 function showNextMessage() {
     requestAnimationFrame(() => {
         if (currentMessage > 0) {
@@ -36,45 +36,64 @@ function showNextMessage() {
             currentMessage++;
             setTimeout(showNextMessage, 3000);
         } else {
-            finalQuestion.style.display = 'block';
-            finalQuestion.style.opacity = '1';
+            // finalQuestion.style.display = 'block';
+            // finalQuestion.style.opacity = '1';
         }
     });
 }
 
 // Button interactions
-document.querySelector('.yes-btn').addEventListener('click', function() {
-    const celebration = document.querySelector('.celebration');
-    celebration.style.display = 'block';
+// document.querySelector('.yes-btn').addEventListener('click', function() {
+//     const celebration = document.querySelector('.celebration');
+//     celebration.style.display = 'block';
 
-    // Optimized heart burst
-    requestAnimationFrame(() => {
-        for (let i = 0; i < 50; i++) {
-            const heart = document.createElement('div');
-            heart.className = 'heart-burst';
-            heart.textContent = '❤️';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.top = Math.random() * 100 + '%';
-            heart.style.animationDelay = Math.random() * 0.5 + 's';
-            celebration.appendChild(heart);
-        }
-    });
+//     // Optimized heart burst
+//     requestAnimationFrame(() => {
+//         for (let i = 0; i < 50; i++) {
+//             const heart = document.createElement('div');
+//             heart.className = 'heart-burst';
+//             heart.textContent = '❤️';
+//             heart.style.left = Math.random() * 100 + '%';
+//             heart.style.top = Math.random() * 100 + '%';
+//             heart.style.animationDelay = Math.random() * 0.5 + 's';
+//             celebration.appendChild(heart);
+//         }
+//     });
 
-    finalQuestion.innerHTML = 
-        "<h2>🎉 I know you're my baby boo 💝</h2>" +
-        "<p>You've made my heart explode with joy!</p>" +
-        "<div style='margin-top: 2rem; font-size: 3rem'>💞🌟</div>";
+//     finalQuestion.innerHTML = 
+//         "<h2>🎉 I know you're my baby boo 💝</h2>" +
+//         "<p>You've made my heart explode with joy!</p>" +
+//         "<div style='margin-top: 2rem; font-size: 3rem'>💞🌟</div>";
+// });
+
+// document.querySelector('.no-btn').addEventListener('mouseover', function() {
+//     requestAnimationFrame(() => {
+//         this.style.transform = 
+//             `translate(${Math.random() * 200 - 100}px, 
+//             ${Math.random() * 200 - 100}px)
+//             rotate(${Math.random() * 360}deg)`;
+//         this.style.transition = 'all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)';
+//     });
+// });
+
+document.querySelector('.start-btn').addEventListener('click', function() {
+    const messageContainer = document.querySelector('.message-container');
+    const btnContainer = document.getElementById('btn-container');
+    btnContainer.style.display = 'none'; 
+    messageContainer.style.display = 'block';
+    const audio = document.getElementById("audio");
+    const audio2 = document.getElementById('audio_1');
+    audio.play()
+      .catch((error) => {
+        console.warn("Playback failed:", error);
+      }); 
+    audio.addEventListener('ended', () => {
+    audio2.play().catch((error) => {
+    console.warn("Second playback failed:", error);
+  });
+});
 });
 
-document.querySelector('.no-btn').addEventListener('mouseover', function() {
-    requestAnimationFrame(() => {
-        this.style.transform = 
-            `translate(${Math.random() * 200 - 100}px, 
-            ${Math.random() * 200 - 100}px)
-            rotate(${Math.random() * 360}deg)`;
-        this.style.transition = 'all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)';
-    });
-});
 
 // Initialize
 createParticles();
